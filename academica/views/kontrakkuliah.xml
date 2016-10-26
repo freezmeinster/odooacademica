@@ -1,0 +1,25 @@
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="academica.kontrakkuliah_list">
+      <field name="name">academica kontrakkuliah list</field>
+      <field name="model">academica.kontrakkuliah</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="mahasiswa"/>
+          <field name="semester"/>
+          <field name="jadwal_kuliah"/>
+          <field name="nilai_akhir"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="academica.kontrakkuliah_action_window">
+      <field name="name">Daftar Kontrak Matakuliah</field>
+      <field name="res_model">academica.kontrakkuliah</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Kontrak Kuliah" id="academica.menu_kontrakkuliah_list" parent="academica.perkuliahan"
+              action="academica.kontrakkuliah_action_window"/>
+  </data>
+</openerp>

@@ -2,9 +2,9 @@
 
 from odoo import models, fields, api
 
-class Dosen(models.Model):
-    _name = 'academica.dosen'
+class MataKuliah(models.Model):
+    _name = 'academica.matakuliah'
     _rec_name = "nama"
 
     nama = fields.Char(required=True)
-    alamat = fields.Text(required=True)
+    deskripsi = fields.Text(required=True)

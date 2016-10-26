@@ -1,0 +1,23 @@
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="academica.matakuliah_list">
+      <field name="name">academica matakuliah list</field>
+      <field name="model">academica.matakuliah</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nama"/>
+          <field name="deskripsi"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="academica.matakuliah_action_window">
+      <field name="name">Daftar Mata Kuliah</field>
+      <field name="res_model">academica.matakuliah</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Mata Kuliah" id="academica.menu_matakuliah_list" parent="academica.perkuliahan"
+              action="academica.matakuliah_action_window"/>
+  </data>
+</openerp>
