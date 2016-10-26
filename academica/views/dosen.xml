@@ -1,0 +1,23 @@
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="academica.dosen_list">
+      <field name="name">academica dosen list</field>
+      <field name="model">academica.dosen</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nama"/>
+          <field name="alamat"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="academica.dosen_action_window">
+      <field name="name">Daftar Dosen</field>
+      <field name="res_model">academica.dosen</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Dosen" id="academica.menu_dosen_list" parent="academica.tatausaha"
+              action="academica.dosen_action_window"/>
+  </data>
+</openerp>

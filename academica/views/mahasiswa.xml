@@ -1,0 +1,24 @@
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="academica.mahasiswa_list">
+      <field name="name">academica mahasiswa list</field>
+      <field name="model">academica.mahasiswa</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nama"/>
+          <field name="nim"/>
+          <field name="alamat"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="academica.mahasiswa_action_window">
+      <field name="name">Daftar Mahasiswa</field>
+      <field name="res_model">academica.mahasiswa</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Mahasiswa" id="academica.menu_mahasiswa_list" parent="academica.tatausaha"
+              action="academica.mahasiswa_action_window"/>
+  </data>
+</openerp>

@@ -1,0 +1,6 @@
+<openerp>
+    <data>
+        <menuitem name="Academica" id="academica.menu_root"/>
+        <menuitem name="Tata Usaha" id="academica.tatausaha" parent="academica.menu_root"/>
+    </data>
+</openerp>

@@ -1,0 +1,23 @@
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="academica.ruangan_list">
+      <field name="name">academica ruangan list</field>
+      <field name="model">academica.ruangan</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nama"/>
+          <field name="deskripsi"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="academica.ruangan_action_window">
+      <field name="name">Daftar Ruangan</field>
+      <field name="res_model">academica.ruangan</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Ruangan" id="academica.menu_ruangan_list" parent="academica.tatausaha"
+              action="academica.ruangan_action_window"/>
+  </data>
+</openerp>
